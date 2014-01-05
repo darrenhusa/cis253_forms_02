@@ -1,0 +1,199 @@
+<html>
+<!-- 
+   New Perspectives on HTML and XHTML
+   Tutorial 6
+   Case Problem 1
+
+   Park City Gazette
+   Author: Darren Henderson
+   Date:   December 23, 2013
+
+   Filename:         subscription.htm
+   Supporting files: parch.jpg, pcg.css, pcglogo.jpg, sform.css
+-->
+
+   <title>Park City Gazette Subscription</title>
+   <link href="pcg.css" rel="stylesheet" type="text/css" />
+   <!-- Bootstrap 3.x -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<script src="js/respond.min.js"></script>
+</head>
+
+<body>
+
+   <div id="header">
+      <img src="pcglogo.jpg" alt="The Park City Gazette" />
+   </div>
+
+   <div id="leftColumn">
+      <h2><a href="#">Home Page</a></h2>
+      <h2><a href="#">News</a></h2>
+      <ul>
+         <li><a href="#">Local</a></li>
+         <li><a href="#">State</a></li>
+         <li><a href="#">National</a></li>
+         <li><a href="#">International</a></li>
+         <li><a href="#">Sports</a></li>
+         <li><a href="#">Weather</a></li>
+      </ul>
+      <h2><a href="#">Classifieds</a></h2>
+      <ul>
+         <li><a href="#">For Sale</a></li>
+         <li><a href="#">Wanted</a></li>
+         <li><a href="#">Employment</a></li>
+         <li><a href="#">Real Estate</a></li>
+         <li><a href="#">Personals</a></li>
+      </ul>
+      <h2><a href="#">Tourism</a></h2>
+      <ul>
+         <li><a href="#">Attractions</a></li>
+         <li><a href="#">Events</a></li>
+         <li><a href="#">Parks</a></li>
+         <li><a href="#">Camping</a></li>
+      </ul>
+      <h2><a href="#">Subscriptions</a></h2>
+      <h2><a href="#">Contact Us</a></h2>
+   </div>
+
+   <div id="rightColumn">
+      <h1>Subscriptions</h1>
+      <p>Yes, I want to subscribe to the Park City Gazette! <br />
+         I can choose from one of the following options:</p>
+
+	<form class="form-horizontal" action="http://www.theparkcitygazette/subscribe" id="subForm" method="post">
+		
+		<div class="form-group">
+			<label class="col-sm-4 control-label">Choose one:</label>
+			
+   			<div class="col-sm-8">	
+				<!-- radio buttons -->
+				<fieldset>			
+					<div class="radio">
+						<input type="radio" name="subplan" id="plan1" value="1" /><label for="plan1">6 mo./$24</label>
+					</div>
+					<div class="radio">
+						<input type="radio" name="subplan" id="plan2" value="2" /><label for="plan2">12 mo./$45</label>
+					</div>
+					<div class="radio">
+						<input type="radio" name="subplan" id="plan3" value="3" /><label for="plan3">18 mo./$64</label>
+					</div>
+					<div class="radio">
+						<input type="radio" name="subplan" id="plan4" value="4" /><label for="plan4">24 mo./$80 (best value)</label>
+					</div>
+				</fieldset>		
+			</div>
+		</div>
+		
+		<!-- textbox -->
+		<div class="form-group">
+			<label class="col-sm-4 control-label" for="txtName">Name</label>
+			<div class="col-sm-8">
+				<input type="text" name="" id="txtName" class ="form-control" />
+			</div>
+		</div>
+		
+		<!-- textarea -->
+		<div class="form-group">
+			<label class="col-sm-4 control-label" for="address">Address</label>
+			<div class="col-sm-8">
+				<textarea name="address" id="address" rows="6" class="form-control"></textarea>
+			</div>
+		</div>
+		
+		<!-- checkbox -->
+		<div class="form-group">
+    		<div class="col-sm-offset-4 col-sm-8">
+      			<div class="checkbox">
+					<label>
+					<input type="checkbox" name="" id="checkbox" />
+					Yes, I wish to pay online by entering my credit card information below.
+					</label>
+				</div>
+			</div>
+		</div>
+		
+		<fieldset id="payment">
+		<div class="form-group">
+			<!-- select -->
+			
+			<label for="cardType" class="col-sm-4 control-label">Credit Card</label>
+			<div class="col-sm-8">
+				<select name="cardType" id="cardType" size="4" class="form-control">
+					<option value="Amex">American Express</option>
+					<option value="Disc">Discover</option>
+					<option value="MC">MasterCard</option>
+					<option value="Visa">Visa</option>
+				</select>
+			</div>
+		</div>
+			
+			<!-- textbox -->
+			<div class="form-group">
+				<label class="col-sm-4 control-label" for="cardName">Name on Card</label>
+				<div class="col-sm-8">
+					<input type="text" name="cardName" id="cardName" class="form-control" />
+				</div>
+			</div>
+					
+			<!-- password -->
+			<div class="form-group">
+				<label class="col-sm-4 control-label" for="cardNumber">Card Number</label>
+				<div class="col-sm-8">
+					<input type="password" name="cardNumber" id="cardNumber" class="form-control" />
+				</div>
+			</div>
+			
+			<!-- drop-down lists -->
+			<div class="form-group">
+				<label for="" class="col-sm-4 control-label">Expiration Date</label>
+				<div class="col-sm-8">
+					<select name="expMonth" id="expMonth" class="form-control">
+						<option value="1">01</option>
+						<option value="2">02</option>
+						<option value="3">03</option>
+						<option value="4">04</option>
+						<option value="5">05</option>
+						<option value="6">06</option>
+						<option value="7">07</option>
+						<option value="8">08</option>
+						<option value="9">09</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+					</select>
+					<select name="expYear" id="expYear" class="form-control">
+						<option value="2011">2011</option>
+						<option value="2012">2012</option>
+						<option value="2013">2013</option>
+						<option value="2014">2014</option>
+						<option value="2015">2015</option>
+					</select>
+				</div>
+			</div>								
+		</fieldset>
+		
+		<!-- buttons -->
+		<fieldset id="buttons">
+		 <div class="form-group">
+    		<div class="col-sm-offset-4 col-sm-8">
+				<input type="submit" value="Subscribe" />
+				<input type="reset" value="Cancel" />
+			</div>
+		</div>
+		</fieldset>
+	</form>
+
+      <address>
+         Park City Gazette &bull;
+         801 Main Street &bull;
+         Estes Park, CO 80517 &bull;
+         1 (800) 555-2918
+      </address>
+   </div>
+<!-- javascript -->
+	<script src="js/jquery-1.10.2.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
